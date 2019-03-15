@@ -6,7 +6,7 @@
 #capture current working directory so I can return to it
 current_wd<-getwd()
 #set working directory to raw data folder
-setwd("LENS/raw.data")
+setwd("L:/DOW/BWAM/LMAS/Lakes Stuff/LCI/2019 LCI/screening/LENS/raw.data")
 
 files<-list.files()
 nfiles<-length(files)
@@ -50,3 +50,4 @@ lens$Total<-rowSums(lens[c('Point Source Load','Septic Load','Forest','Cultivate
 
 #write the file
 write.csv(lens,file="LENS/concatinated.lens.csv",row.names=FALSE)
+write.csv(lens,file="L:/DOW/BWAM/LMAS/Lakes Stuff/LCI/2019 LCI/screening/LENS/concatinated.lens.csv",row.names=FALSE)
